@@ -1,14 +1,11 @@
-// 
-function side_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("bars").style.display = "none";
-    document.getElementById("cross").style.display = "block";
+// Sidebar Display
+const sidebar = document.querySelector('.sidebar');
+
+function changeBars(x) {
+    x.classList.toggle('bar-active');
+    sidebar.classList.toggle('display-sidebar');
 }
-function side_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("bars").style.display = "block";
-    document.getElementById("cross").style.display = "none";
-}
+
 
 // 
 // Navbar
@@ -19,7 +16,7 @@ const logoTwo = document.querySelector('.logo-two');
 // Anchors
 const navbarAnchors = document.querySelector('.navbar-anchors');
 // Bars
-const bar = document.querySelector('#bars');
+const bar = document.querySelector('.bars');
 const cross = document.querySelector('#cross');
 // Arrow
 const arrow = document.querySelector('.arrow');
