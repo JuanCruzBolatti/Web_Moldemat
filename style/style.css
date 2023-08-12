@@ -410,7 +410,7 @@ h4 {
 }
 
 .arrow i {
-    color: var(--color-gray);
+    color: var(--color-main);
     font-size: 6rem;
     transition: 0.3s ease;
 }
