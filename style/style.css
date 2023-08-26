@@ -122,8 +122,8 @@ h4 {
 /* Sidebar */
 .sidebar {
     height: 150vh;
-    width: 25rem;
-    background-color: #fafafaf9;
+    width: calc(100vw - 6.5rem);
+    background-color: rgba(240, 240, 240, 0.976);
     position: fixed !important;
     z-index: 1;
     overflow: auto;
@@ -133,10 +133,13 @@ h4 {
 .sidebar-info {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     flex-direction: column;
     margin-top: 5rem;
     text-indent: 2rem;
+}
+
+.sidebar-info .button-contact {
+    text-align: center;
 }
 
 .sidebar-info p {
@@ -154,9 +157,22 @@ h4 {
 .sidebar-anchors a {
     width: 100%;
     padding: 1rem 0rem;
+    font-weight: bold;
+    font-size: 2rem;
     color: var(--color-text);
     border-bottom: solid 1px var(--color-light-gray);
 }
+
+.sidebar-number {
+    position: absolute;
+    bottom: 40rem;
+    left: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
 .display-sidebar {
     display: block!important;
 }
