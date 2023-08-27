@@ -28,6 +28,16 @@ body {
     line-height: 1.6;
 }
 
+/* Selection */
+::-moz-selection {
+    background: var(--color-secondary);
+    color: #fff;
+}
+::selection {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
 /** GLOBAL **/
 a {
     text-decoration: none;
@@ -862,92 +872,81 @@ h4 {
 
 /** CLIENT SECTION **/
 .client {
+    margin: 15rem auto 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 8rem;
 }
-
-.client-info {
-    width: 100%;
+.client-text {
+    width: 50%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
 }
-
-.client-info h4 {
-    font-size: 2.5rem;
+.client-text h4 {
+    font-size: 2.4rem;
 }
-
-.client-info a {
-    color: #000;
-    position: relative;
+.client-text p {
+    margin: 1rem 0 1rem 3rem;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: rgba(110, 110, 110, 0.77);
 }
-
-.client-info a::after {
-    background: none repeat scroll 0 0 transparent;
-    content: "";
-    display: block;
-    height: 2px;
-    bottom: -3px;
-    left: -5px;
-    position: absolute;
-    background: var(--color-secondary);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+.client-text a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-gray);
+    transition: .2s ease;
 }
-
-.client-info a:hover::after {
-    width: 115%;
+.client-content {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 9vw 9vw;
+    gap: .5rem;
 }
-
-.clients {
-    width: 100%;
-    margin-top: 1rem;
+.client-content div {
+    background-color: #fff;
+    aspect-ratio: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
 }
-
-.clients img {
-    width: 30%;
+.client-content div img {
+    width: 70%;
 }
 
 @media (min-width: 768px) {
     .client {
-        margin-top: 14rem;
+        width: 80%;
+        flex-direction: row;
+        align-items: flex-start;
     }
-    .client-info {
-        position: relative;
+    .client-text {
+        height: 50vh; /* Arreglar */
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: start;
     }
-
-    .client-info::after {
-        background: none repeat scroll 0 0 transparent;
-        content: "";
-        display: block;
-        height: 3px;
-        bottom: -3px;
-        left: 21%;
-        position: absolute;
-        background: #d8d8d8;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 58%;
+    .client-text h4 {
+        font-size: 4rem;
     }
-
-    .client-info h4 {
-        font-size: 3.4rem;
+    .client-text p {
+        font-size: 8rem;
+        line-height: 7rem;
     }
-
-    .clients {
-        width: 70%;
-        margin: 2rem auto;
+    .client-text a {
+        font-size: 2rem;
     }
-
-    .clients img {
-        width: 19%;
-        /* Change according to the number of images */
+    .client-text a:hover {
+        color: var(--color-tertiary);
+    }
+    .client-content div:hover {
+        box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.19);
+        z-index: 6;
     }
 }
 
