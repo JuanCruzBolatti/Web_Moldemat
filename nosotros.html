@@ -27,17 +27,21 @@
 </head>
 
 <body>
-    <header class="header nav-active">
+    <header class="header">
         <!-- Sidebar -->
-        <div class="sidebar reverse-hidden" style="display: none;" id="mySidebar">
+        <div class="reverse-hidden sidebar " style="display: none;" id="mySidebar">
             <div class="sidebar-info">
                 <div class="sidebar-anchors">
                     <a href="/servicios.html">Servicios</a>
                     <a href="/nosotros.html">Nosotros</a>
                 </div>
                 <a class="button-contact" href="/contact.html">Contacto</a>
-                <p>+55423434754</p>
-                <p>De 8:00 a 8:01</p>
+                <div class="sidebar-number">
+                    <h4>Llamanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p>+54 11 9345 8763</p>
+                    <p>4201 5940</p>
+                </div>
             </div>
         </div>
 
@@ -55,11 +59,12 @@
                 <a class="button-contact" href="/contact.html">Contacto</a>
             </nav>
 
-            <div class="reverse-hidden">
-                <!-- Responsive Bars -->
-                <button class="button-bars" id="bars" onclick="side_open()"><i class="fa-solid fa-bars"></i></button>
-                <button class="button-bars" style="display: none;" id="cross" onclick="side_close()"><i
-                        class="fa-solid fa-xmark"></i></button>
+            <div class="reverse-hidden bar-container">
+                <div class="bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -112,7 +117,23 @@
                 </div>
             </div>
         </div>
+        <div class="reverse-hidden about-triangle about-triangle-first" style="border-color: var(--color-secondary) transparent transparent transparent;"></div>
+    </section>
 
+    <section class="about-client">
+        <h4>Nuestros Clientes</h4>
+        <div class="about-client-content">
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+            <div><img src="style/img/Toyota_EU.png" alt=""></div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -134,8 +155,8 @@
             <div class="footer-info-section">
                 <h4>Contacto</h4>
                 <div class="footer-phone">
-                    <p>+3275463765</p>
-                    <p>Horario 8:00 a 8:01</p>
+                    <p>+54 11 4567 2345</p>
+                    <p>Horario 8:00 a 16:00</p>
                 </div>
                 <div class="footer-social">
                     <p>red social 1</p>
@@ -146,7 +167,7 @@
         </div>
         <div class="baseboard">
             <i class="fa-regular fa-copyright"></i>
-            <p class="no-margin">2022 Moldemat SRL. Todos los derechos reservados</p>
+            <p class="no-margin">2023 Moldemat SRL. Todos los derechos reservados</p>
         </div>
     </footer>
 

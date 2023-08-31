@@ -649,6 +649,7 @@ h4 {
     }
 }
 
+/** ABOUT PAGE **/
 .about-page-title {
     margin-top: 5rem;
     padding: 2rem 0;
@@ -749,6 +750,9 @@ h4 {
 
     .about-second .about-text {
         margin: 7vh 0 7vh 4%;
+    }
+    .about-third p {
+        text-align: justify;
     }
 }
 
