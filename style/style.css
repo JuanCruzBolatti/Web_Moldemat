@@ -829,7 +829,6 @@ h4 {
     }
 }
 
-
 /** EXAMPLES **/
 .example {
     margin-top: 11rem;
@@ -1039,6 +1038,133 @@ h4 {
     .client-content div:hover {
         box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.19);
         z-index: 6;
+    }
+}
+
+/** SERVICE PAGE **/
+.service-page-cards {
+    margin: .5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.service-page-card {
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.45);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.service-page-card .card-image {
+    position: relative;
+    width: calc(100% - 10rem);
+    margin: 6rem 6.7rem 1rem 3.3rem;
+    aspect-ratio: 1;
+}
+.service-page-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.service-page-card .card-image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1.5rem solid var(--color-main);
+    top: -3.2rem;
+    right: -3.2rem;
+    transition: .2s ease-in-out;
+}
+.service-page-card:nth-child(2) .card-image::after {
+    border: 1.5rem solid var(--color-secondary);
+}
+.service-page-card:nth-child(3) .card-image::after {
+    border: 1.5rem solid var(--color-tertiary);
+}
+.service-page-card h4 {
+    font-size: 2rem;
+}
+.service-page-card p {
+    width: 90%;
+    text-align: center;
+}
+.service-page-card a {
+    font-size: 1.8rem;
+    background-color: var(--color-main);
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    transition: .2s ease;
+}
+.service-page-card:nth-child(2) a {
+    background-color: var(--color-secondary);
+}
+.service-page-card:nth-child(3) a {
+    background-color: var(--color-tertiary);
+}
+.service-page-card a:hover {
+    opacity: .8;
+}
+@media (min-width: 768px) {
+    .service-page-cards {
+        margin: 3rem auto;
+        flex-direction: row;
+        gap: 3rem;
+        width: 70%;
+    }
+    .service-page-card {
+        height: 60vh;
+        margin-top: 0;
+    }
+    .service-page-card h4 {
+        font-size: 3rem;
+    }
+}
+.service-process {
+    margin: 5rem auto;
+    width: 90%;
+}
+.service-process h4 {
+    margin: 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+}
+.service-process-cards {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 900;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: auto;
+}
+.service-process-card {
+    padding: 20rem 6rem 1rem 3rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.45);
+}
+@media (min-width: 768px) {
+    .service-process {
+        width: 70%;
+    }
+    .service-process h4 {
+        font-size: 4rem;
+    }
+    .service-process-cards {
+        gap: 3rem;
+        font-size: 2.8rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .service-process-card {
+        box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.75);
     }
 }
 
