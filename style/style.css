@@ -780,7 +780,6 @@ h4 {
 .services-card {
     margin-top: 3rem;
     width: 100%;
-    height: 40vh;
     box-shadow: 0px 0px 38px -17px rgba(0,0,0,0.75); 
     display: flex;
     flex-direction: column;
@@ -835,6 +834,7 @@ h4 {
         flex-direction: row;
     }
     .services-card {
+        height: 40vh;
         width: 32%;
         position: relative;
         overflow: hidden;
@@ -872,13 +872,12 @@ h4 {
 
 /** CLIENT SECTION **/
 .client {
-    margin: 15rem auto 0;
+    margin: 5rem auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .client-text {
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -890,12 +889,19 @@ h4 {
     font-size: 2.4rem;
 }
 .client-text p {
+    text-align: start;
     margin: 1rem 0 1rem 3rem;
-    font-size: 2.2rem;
+    font-size: 4.8rem;
+    line-height: 4.5rem;
+    text-transform: capitalize;
     font-weight: bold;
     color: rgba(110, 110, 110, 0.77);
+    transition: .2s ease;
 }
-.client-text a {
+.client:hover .client-text p {
+    color: var(--color-secondary);
+}
+.client a {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-gray);
@@ -904,7 +910,7 @@ h4 {
 .client-content {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 9vw 9vw;
+    grid-template-columns: 27vw 27vw 27vw;
     gap: .5rem;
 }
 .client-content div {
@@ -921,11 +927,13 @@ h4 {
 
 @media (min-width: 768px) {
     .client {
+        margin: 15rem auto 0;
         width: 80%;
         flex-direction: row;
         align-items: flex-start;
     }
     .client-text {
+        width: 50%;
         height: 50vh; /* Arreglar */
         align-items: flex-start;
         justify-content: space-between;
@@ -938,11 +946,17 @@ h4 {
         font-size: 8rem;
         line-height: 7rem;
     }
-    .client-text a {
+    .client a {
         font-size: 2rem;
     }
-    .client-text a:hover {
+    .client a:hover {
         color: var(--color-tertiary);
+    }
+    .client-content {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 9vw 9vw;
+        gap: .5rem;
     }
     .client-content div:hover {
         box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.19);
