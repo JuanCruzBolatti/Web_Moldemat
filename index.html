@@ -143,7 +143,7 @@
             <div><img src="style/img/Client_Logo_Honda.png" alt=""></div>
             <div><img src="style/img/Client_Logo_Surrey.jpg" alt=""></div>
         </div>
-        <a class="reverse-hidden" href="#">Ver Más</a>
+        <a class="reverse-hidden" href="#">Conoce a Más Clientes</a>
     </section>
 
     <div class="example"> <!-- Cambiar las imagenes -->
@@ -155,7 +155,7 @@
         <h4 class="contact-title">Contactanos</h4>
         <div class="contact-info">
             <div class="contact-form contact-info-div">
-                <form action="https://formsubmit.co/juanchobc44@gmail.com" method="POST">
+                <form action="https://formsubmit.co/juanchobc44@gmail.com" method="POST"> <!-- Poner el codigo como mail oculto -->
                     <!-- Para que llegue al mail action="https://formsubmit.co/juanchobc44@gmail.com" -->
                     <!-- Para que llegue a una plataforma https://getform.io/f/e70f63f0-aa0f-4966-afc1-6bad255a8e22 -->
                     <label for="fname">Nombre/s</label>
@@ -174,17 +174,19 @@
                     <textarea name="txtarea" id="txtarea" cols="30" rows="10"></textarea>
 
                     <input type="submit" value="Enviar">
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html"><!-- Cambiarlo por la pagina de moldemat -->
+                    <input type="hidden" name="_captcha" value="false"> 
                 </form>
             </div>
             <div class="contact-numbers">
                 <div class="contact-info-div">
-                    <h4>Escribinos</h4>
-                    <p>De 8:00 a 19:00 hs</p>
-                    <p><i class="fa-brands fa-whatsapp"></i> +54 11 9345 8763</p>
                     <h4>Llamanos</h4>
                     <p>De 8:00 a 16:00 hs</p>
-                    <p><i class="fa-solid fa-mobile"></i> +54 11 9345 8763</p>
-                    <p><i class="fa-solid fa-phone"></i> 4201 5940</p>
+                    <p><i class="fa-solid fa-phone"></i> (54 11) 4246 2884</p>
+                    <h4 style="margin-top: 1rem;">Visitanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Las Piedras 2804, Lanús, Buenos Aires</p>
                 </div>
             </div>
         </div>

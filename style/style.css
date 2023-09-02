@@ -832,9 +832,13 @@ h4 {
 
 /** EXAMPLES **/
 .example {
-    margin-top: 11rem;
+    margin-top: 5rem;
 }
-
+@media (min-width: 768px) {
+    .example {
+        margin-top: 8rem;
+    }
+}
 .example img {
     width: 100%;
 }
@@ -1171,7 +1175,7 @@ h4 {
 
 /** CONTACT SECTION **/
 .contact {
-    margin-top: 4rem;
+    margin-top: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1208,7 +1212,7 @@ h4 {
 @media (min-width: 768px) {
     .contact {
         width: 70%;
-        margin: 8rem auto 0;
+        margin: 2rem auto 0;
     }
 
     .contact-info {

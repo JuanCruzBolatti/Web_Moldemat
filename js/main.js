@@ -15,7 +15,7 @@ function initMap() {
         attribution: '© OpenStreetMap'
     }).addTo(map); 
     var marker = L.marker([-34.7217851, -58.3744177]).addTo(map);
-    marker.bindPopup("<b class='leafletb'>Direccion</b><br>Calle 1234").openPopup();
+    marker.bindPopup("<b class='leafletb'>Direccion</b><br>Las Piedras 2804").openPopup();
 }
 
 // Llama a la función initMap en cada página donde quieras mostrar el mapa
