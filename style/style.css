@@ -654,8 +654,14 @@ h4 {
 .about-page-title {
     margin-top: 5rem;
     padding: 2rem 0;
-    background-color: var(--color-gray);
+    background-size: cover;
+    background-position: center;
     text-align: center;
+    background-size: 100%;
+    transition: background-size 0.3s ease;
+}
+.about-page-title:hover {
+    background-size: 120%;
 }
 
 .about-page-title h3 {
@@ -1339,6 +1345,10 @@ textarea:focus {
 
 .footer-info-section a {
     color: #000;
+    transition: .2s ease;
+}
+.footer-info-section a:hover {
+    color: var(--color-tertiary);
 }
 
 .footer-info-section p {
