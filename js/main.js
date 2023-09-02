@@ -6,6 +6,52 @@ function changeBars(x) {
     sidebar.classList.toggle('display-sidebar');
 }
 
+// map.js
+function initMap() {
+    // LeaftletJS Map
+    var map = L.map('map').setView([-34.7217851, -58.3744177], 16);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map); 
+    var marker = L.marker([-34.7217851, -58.3744177]).addTo(map);
+    marker.bindPopup("<b class='leafletb'>Direccion</b><br>Calle 1234").openPopup();
+}
+
+// Llama a la función initMap en cada página donde quieras mostrar el mapa
+if (document.getElementById('map')) {
+    initMap();
+}
+
+
+// AOS
+AOS.init();
+
+// You can also pass an optional settings object
+// below listed default settings
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+
 
 // 
 // Navbar
@@ -23,7 +69,7 @@ const arrow = document.querySelector('.arrow');
 //
 const host = "https://radiant-twilight-6daffd.netlify.app/";
 const localhost = "http://127.0.0.1:5500/index.html";
-if ((window.location.href == host + 'index.html') || (window.location.href == host) || (window.location.href == localhost)) {
+if((window.location.href == host + 'index.html') || (window.location.href == host) || (window.location.href == localhost)) {
     window.onscroll = () => {
         if (window.scrollY > 100) {
             // Navbar
@@ -52,7 +98,7 @@ if ((window.location.href == host + 'index.html') || (window.location.href == ho
             // Arrow
             arrow.classList.remove('arrow-hide');
         }
-    };
+    }
 } else {
     // Navbar
     navbar.classList.add('nav-active');
@@ -65,42 +111,5 @@ if ((window.location.href == host + 'index.html') || (window.location.href == ho
     bar.classList.add('button-active');
     cross.classList.add('button-active');
 }
-
-// LeaftletJS Map
-var map = L.map('map').setView([-34.7217851, -58.3744177], 16);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(map); 
-var marker = L.marker([-34.7217851, -58.3744177]).addTo(map);
-marker.bindPopup("<b class='leafletb'>Direccion</b><br>Calle 1234").openPopup();
-
-//
-AOS.init();
-
-// You can also pass an optional settings object
-// below listed default settings
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-  
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-});
 
 

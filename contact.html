@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moldemat</title>
+
     <!-- LeafletJS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
@@ -25,17 +26,21 @@
 </head>
 
 <body>
-    <header class="header nav-active">
+    <header class="header">
         <!-- Sidebar -->
-        <div class="sidebar reverse-hidden" style="display: none;" id="mySidebar">
+        <div class="reverse-hidden sidebar " style="display: none;" id="mySidebar">
             <div class="sidebar-info">
                 <div class="sidebar-anchors">
                     <a href="/servicios.html">Servicios</a>
                     <a href="/nosotros.html">Nosotros</a>
                 </div>
                 <a class="button-contact" href="/contact.html">Contacto</a>
-                <p>+55423434754</p>
-                <p>De 8:00 a 8:01</p>
+                <div class="sidebar-number">
+                    <h4>Llamanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p>+54 11 9345 8763</p>
+                    <p>4201 5940</p>
+                </div>
             </div>
         </div>
 
@@ -53,11 +58,12 @@
                 <a class="button-contact" href="/contact.html">Contacto</a>
             </nav>
 
-            <div class="reverse-hidden">
-                <!-- Responsive Bars -->
-                <button class="button-bars" id="bars" onclick="side_open()"><i class="fa-solid fa-bars"></i></button>
-                <button class="button-bars" style="display: none;" id="cross" onclick="side_close()"><i
-                        class="fa-solid fa-xmark"></i></button>
+            <div class="reverse-hidden bar-container">
+                <div class="bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -66,7 +72,7 @@
         <h3>Contactanos</h3>
     </div>
 
-    <section class="contact">
+    <section class="contact" style="margin-top: 3rem;">
         <div class="contact-info">
             <div class="contact-form contact-info-div">
                 <form action="" method="POST">
@@ -127,8 +133,8 @@
             <div class="footer-info-section">
                 <h4>Contacto</h4>
                 <div class="footer-phone">
-                    <p>+3275463765</p>
-                    <p>Horario 8:00 a 8:01</p>
+                    <p>+54 11 4567 2345</p>
+                    <p>Horario 8:00 a 16:00</p>
                 </div>
                 <div class="footer-social">
                     <p>red social 1</p>
@@ -139,7 +145,7 @@
         </div>
         <div class="baseboard">
             <i class="fa-regular fa-copyright"></i>
-            <p class="no-margin">2022 Moldemat SRL. Todos los derechos reservados</p>
+            <p class="no-margin">2023 Moldemat SRL. Todos los derechos reservados</p>
         </div>
     </footer>
 
@@ -149,6 +155,11 @@
     crossorigin=""></script>
     <!-- Modernizr -->
     <script src="js/modernizr.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- Main Style -->
     <script src="js/main.js"></script>
 </body>
