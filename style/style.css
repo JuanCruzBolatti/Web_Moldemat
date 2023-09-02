@@ -657,11 +657,6 @@ h4 {
     background-size: cover;
     background-position: center;
     text-align: center;
-    background-size: 100%;
-    transition: background-size 0.3s ease;
-}
-.about-page-title:hover {
-    background-size: 120%;
 }
 
 .about-page-title h3 {
@@ -733,6 +728,13 @@ h4 {
         margin-top: 5rem;
         padding: 3rem 0;
     }
+    .about-page-title {
+        background-size: 100%;
+        transition: background-size 0.3s ease;
+    }
+    .about-page-title:hover {
+        background-size: 120%;
+    }
 
     .about-page-title h3 {
         font-size: 5rem;
@@ -752,11 +754,16 @@ h4 {
     .about-second .about-info {
         flex-direction: row-reverse;
         margin-left: auto;
+        margin-right: 5rem;
         background-color: var(--color-tertiary);
     }
 
     .about-second .about-text {
         margin: 7vh 0 7vh 4%;
+    }
+    .about-second .about-img {
+        margin-right: 6rem;
+        margin-left: 0;
     }
     .about-third p {
         text-align: justify;
@@ -789,7 +796,7 @@ h4 {
 @media (min-width: 768px) {
     .about-client {
         width: 70%;
-        margin: 0 auto;
+        margin: 0 auto 5rem;
     }
     .about-client-text h4 {
         font-size: 4rem;
@@ -1080,6 +1087,7 @@ h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .2s ease;
 }
 .service-page-card .card-image::after {
     content: "";
@@ -1099,6 +1107,7 @@ h4 {
 }
 .service-page-card h4 {
     font-size: 2rem;
+    transition: .2s ease;
 }
 .service-page-card p {
     width: 90%;
@@ -1119,8 +1128,17 @@ h4 {
 .service-page-card:nth-child(3) a {
     background-color: var(--color-tertiary);
 }
-.service-page-card a:hover {
+.service-page-card a:hover{
     opacity: .8;
+}
+.service-page-card:hover h4 {
+    color: var(--color-main);
+}
+.service-page-card:hover:nth-child(2) h4 {
+    color: var(--color-secondary);
+}
+.service-page-card:hover:nth-child(3) h4 {
+    color: var(--color-tertiary);
 }
 @media (min-width: 768px) {
     .service-page-cards {
@@ -1135,6 +1153,47 @@ h4 {
     }
     .service-page-card h4 {
         font-size: 3rem;
+    }
+}
+.service-tools {
+    width: 90%;
+    margin: 3rem auto;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.45);
+    display: grid;
+}
+.service-tools:hover h4 {
+    color: var(--color-main);
+}
+.service-tools-text {
+    width: 100%;
+    padding: 3rem 4rem;
+}
+.service-tools-text h4 {
+    font-size: 2.4rem;
+    transition: .2s ease;
+}
+.service-tools-text ul {
+    list-style: inside;
+    padding: 0;
+}
+.service-tools-img {
+    width: 100%;
+    height: 100%;
+}
+.service-tools-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 768px) {
+    .service-tools {
+        width: 70%;
+        margin: 8rem auto 4rem;
+        grid-template-columns: 40% 60%;
+    }
+    .service-tools-text h4 {
+        font-size: 4rem;
     }
 }
 .service-process {
@@ -1156,10 +1215,14 @@ h4 {
 }
 .service-process-card {
     padding: 20rem 6rem 1rem 3rem;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     border-radius: 8px;
     box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.45);
+    transition: background-size .2s ease;
+}
+.service-process-card:hover {
+    background-size: 120%;
 }
 @media (min-width: 768px) {
     .service-process {
