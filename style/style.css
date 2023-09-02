@@ -912,7 +912,7 @@ h4 {
         flex-direction: row;
     }
     .services-card {
-        height: 40vh;
+        min-height: 40vh;
         width: 32%;
         position: relative;
         overflow: hidden;
