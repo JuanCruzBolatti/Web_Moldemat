@@ -791,11 +791,11 @@ h4 {
     text-indent: 1rem;
 }
 .about-client-content {
-    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-columns: auto auto auto auto auto auto!important;
 }
 @media (min-width: 768px) {
     .about-client {
-        width: 70%;
+        width: 90%;
         margin: 0 auto 5rem;
     }
     .about-client-text h4 {
@@ -807,7 +807,7 @@ h4 {
     }
     .about-client-content {
         width: 90%;
-        grid-template-columns: auto auto auto auto auto!important;
+        grid-template-columns: auto auto auto auto auto auto auto auto!important;
     }
 }
 .about-to-contact {
@@ -1145,14 +1145,21 @@ h4 {
         margin: 3rem auto;
         flex-direction: row;
         gap: 3rem;
-        width: 70%;
     }
     .service-page-card {
-        height: 60vh;
+        height: 80vh;
         margin-top: 0;
     }
     .service-page-card h4 {
         font-size: 3rem;
+    }
+}
+@media (min-width: 1350px) {
+    .service-page-cards {
+        width: 70%;
+    }
+    .service-page-card {
+        height: 60vh;
     }
 }
 .service-tools {
@@ -1188,12 +1195,16 @@ h4 {
 }
 @media (min-width: 768px) {
     .service-tools {
-        width: 70%;
         margin: 8rem auto 4rem;
         grid-template-columns: 40% 60%;
     }
     .service-tools-text h4 {
         font-size: 4rem;
+    }
+}
+@media (min-width: 1300px) {
+    .service-tools {
+        width: 70%;
     }
 }
 .service-process {
