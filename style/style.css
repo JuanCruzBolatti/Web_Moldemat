@@ -1060,6 +1060,80 @@ h4 {
 }
 
 /** SERVICE PAGE **/
+.service-page-main-card {
+    margin: 5rem auto 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.45);
+}
+.sm-card-img {
+    position: relative;
+    width: calc(100% - 10rem);
+    margin: 6rem 6.7rem 1rem 3.3rem;
+    aspect-ratio: 1;
+}
+.sm-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s ease;
+}
+.sm-card-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1.5rem solid var(--color-secondary);
+    top: -3.2rem;
+    right: -3.2rem;
+    transition: .2s ease-in-out;
+}
+.sm-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+    width: 90%;
+}
+.sm-card-text h4 {
+    font-size: 2.4rem;
+}
+.sm-card-text ul {
+    list-style: inside;
+    padding: 0;
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .service-page-main-card {
+        width: 90%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+    .sm-card-img {
+        width: 30%;
+        margin: 6rem 6.7rem 2rem 3.3rem;
+    }
+    .sm-card-text {
+        width: calc(60% - 3rem);
+    }
+    .sm-card-text h4 {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 768px) and (min-height: 750px) {
+    .service-page-main-card {
+        width: 70%;
+    }
+}
+
+
 .service-page-cards {
     margin: .5rem auto;
     display: flex;
@@ -1154,7 +1228,7 @@ h4 {
         font-size: 3rem;
     }
 }
-@media (min-width: 1350px) {
+@media (min-width: 768px) and (min-height: 750px) {
     .service-page-cards {
         width: 70%;
     }
@@ -1202,7 +1276,7 @@ h4 {
         font-size: 4rem;
     }
 }
-@media (min-width: 1300px) {
+@media (min-width: 768px) and (min-height: 750px) {
     .service-tools {
         width: 70%;
     }
@@ -1236,9 +1310,6 @@ h4 {
     background-size: 120%;
 }
 @media (min-width: 768px) {
-    .service-process {
-        width: 70%;
-    }
     .service-process h4 {
         font-size: 4rem;
     }
@@ -1246,13 +1317,17 @@ h4 {
         gap: 3rem;
         font-size: 2.8rem;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
     }
     .service-process-card {
         box-shadow: 0px 0px 34px -7px rgba(0,0,0,0.75);
     }
 }
-
+@media (min-width: 768px) and (min-height: 750px) {
+    .service-process {
+        width: 70%;
+    }
+}
 /** CONTACT SECTION **/
 .contact {
     margin-top: 0;
