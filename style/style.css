@@ -528,7 +528,6 @@ h4 {
 .about-text h4 {
     font-size: 2.4rem;
 }
-
 @media (min-width: 768px) {
     .about {
         margin-top: 3rem;
@@ -582,7 +581,7 @@ h4 {
 
     .about-text {
         width: 35vw;
-        margin: 5vh 4% 0 0;
+        margin: 1vh 4% 0 0;
     }
 
     .about-text h4 {
@@ -592,8 +591,8 @@ h4 {
 
     .about-text p {
         text-align: justify;
-        font-size: 2rem;
-        line-height: 1.4;
+        font-size: 1.8rem;
+        line-height: 1.3;
         margin-top: 2rem;
         text-indent: 2rem;
         color: var(--color-white);
@@ -619,8 +618,10 @@ h4 {
     .about-text .see-more:hover::after {
         width: 80%;
     }
+    .text-margin {
+        margin: 5vh 4% 0 0;
+    }
 }
-
 @media (min-width: 768px) and (max-width: 1200px) {
     .about-info {
         width: 90%;
@@ -628,25 +629,37 @@ h4 {
 
     .about-text {
         width: 46vw;
-        margin: 5vh 4% 0 0;
+        margin: 1vh 4% 0 0;
     }
 
     .about-text p {
         font-size: 1.7rem;
         margin-top: 2rem;
     }
+    .about .about-info .text-margin {
+        margin: 5vh 4% 0 0!important;
+    }
 }
 
-@media (min-width: 1201px) and (max-width: 1500px) {
+@media (min-width: 1280px) {
     .about-text p {
         font-size: 1.8rem;
         line-height: 1.3;
+    }
+    .about-text {
+        margin: 5vh 4% 0 0;
+    }
+    .text-margin {
+        margin: 5vh 4% 0 0;
     }
 }
 
 @media (min-width: 1501px) {
     .about-text p {
         font-size: 2.2rem;
+    }
+    .text-margin {
+        margin: 5vh 4% 0 0;
     }
 }
 
@@ -670,7 +683,7 @@ h4 {
 
 .about-page .about h4 {
     padding: 2rem 0;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #000;
 }
 
@@ -721,7 +734,7 @@ h4 {
 
 @media (min-width: 768px) {
     .about-page {
-        margin-bottom: 3rem;
+        margin-bottom: 6rem;
     }
 
     .about-page-title {
@@ -787,7 +800,7 @@ h4 {
 }
 .about-client-text p {
     font-size: 1.5rem;
-    text-align: justify;
+    text-align: center;
     text-indent: 1rem;
 }
 .about-client-content {
@@ -1102,22 +1115,42 @@ h4 {
 }
 .sm-card-text h4 {
     font-size: 2.4rem;
+    transition: .2s ease-in-out;
 }
 .sm-card-text ul {
     list-style: inside;
     padding: 0;
     font-size: 2rem;
 }
+.service-page-main-card:hover .sm-card-text h4 {
+    color: var(--color-secondary);
+}
 @media (min-width: 768px) {
     .service-page-main-card {
-        width: 90%;
+        width: 59.4%;
+        margin-left: 5%;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 3rem;
+        position: relative;
+    }
+    .service-page-main-card::after {
+        content: "Moldemat: Transformando ideas en piezas perfectas";
+        position: absolute;
+        right: -29rem;
+        top: 5rem;
+        width: 35%;
+        font-size: 4.3rem;
+        line-height: 4.3rem;
+        font-weight: 900;
+        color: #00000032;
+        transition: .2s ease-in-out;
+    }
+    .service-page-main-card:hover::after {
+        color: #41a2d7c1;
     }
     .sm-card-img {
-        width: 30%;
+        width: 42%;
         margin: 6rem 6.7rem 2rem 3.3rem;
     }
     .sm-card-text {
@@ -1127,9 +1160,24 @@ h4 {
         font-size: 3rem;
     }
 }
+@media (min-width: 1280px) {
+    .service-page-main-card::after {
+        right: -35rem;
+        top: 5rem;
+        width: 35%;
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+}
 @media (min-width: 768px) and (min-height: 750px) {
     .service-page-main-card {
-        width: 70%;
+        width: 46.2%;
+        margin-left: 15%;
+        gap: 0;
+    }
+    .sm-card-img {
+        width: 47%;
+        margin: 6rem 6.7rem 2rem 3.3rem;
     }
 }
 
@@ -1505,7 +1553,6 @@ textarea:focus {
 .footer-info-section p {
     margin: 0;
 }
-
 @media (min-width: 768px) {
     .footer-info {
         flex-direction: row;
