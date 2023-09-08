@@ -804,7 +804,7 @@ h4 {
     text-indent: 1rem;
 }
 .about-client-content {
-    grid-template-columns: auto auto auto auto auto auto!important;
+    grid-template-columns: auto auto auto auto!important;
 }
 @media (min-width: 768px) {
     .about-client {
