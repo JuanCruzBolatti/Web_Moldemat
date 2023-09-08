@@ -1171,7 +1171,7 @@ h4 {
 }
 @media (min-width: 768px) and (min-height: 750px) {
     .service-page-main-card {
-        width: 46.2%;
+        width: 46.8%;
         margin-left: 15%;
         gap: 0;
     }
@@ -1184,9 +1184,8 @@ h4 {
 
 .service-page-cards {
     margin: .5rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 100%;
     width: 90%;
 }
 .service-page-card {
@@ -1263,17 +1262,17 @@ h4 {
     color: var(--color-tertiary);
 }
 @media (min-width: 768px) {
-    .service-page-cards {
-        margin: 3rem auto;
-        flex-direction: row;
-        gap: 3rem;
-    }
     .service-page-card {
         height: 80vh;
         margin-top: 0;
     }
     .service-page-card h4 {
         font-size: 3rem;
+    }
+    .service-page-cards {
+        margin: 3rem auto;
+        grid-template-columns: 32% 32% 32%;
+        column-gap: 2vw;
     }
 }
 @media (min-width: 768px) and (min-height: 750px) {
