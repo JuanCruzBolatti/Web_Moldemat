@@ -114,7 +114,7 @@ h4 {
     box-sizing: border-box;
     overflow: hidden;
     transition: 0.2s ease-in-out;
-    z-index: 3;
+    z-index: 50;
 }
 
 @media (min-width: 768px) {
@@ -387,9 +387,6 @@ h4 {
     margin: 0;
 }
 
-.banner:hover .banner-text > h1 {
-    font-size: 2.1rem;
-}
 
 @media (min-width: 768px) and (min-height: 700px) {
     .banner-text {
@@ -401,7 +398,7 @@ h4 {
     .banner-text {
         margin: 35vh 18rem 0;
         text-align: start;
-        width: 60%;
+        width: 70%;
     }
 
     .banner-text h1 {
@@ -823,6 +820,7 @@ h4 {
         grid-template-columns: auto auto auto auto auto auto auto auto!important;
     }
 }
+
 .about-to-contact {
     display: flex;
     flex-direction: column;
@@ -1051,8 +1049,8 @@ h4 {
         font-size: 4rem;
     }
     .client-text p {
-        font-size: 8rem;
-        line-height: 7rem;
+        font-size: 6rem;
+        line-height: 5rem;
     }
     .client a {
         font-size: 2rem;
@@ -1069,6 +1067,12 @@ h4 {
     .client-content div:hover {
         box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.19);
         z-index: 6;
+    }
+}
+@media (min-width: 1280px) {
+    .client-text p {
+        font-size: 8rem;
+        line-height: 7rem;
     }
 }
 
@@ -1416,7 +1420,7 @@ h4 {
 
 @media (min-width: 768px) {
     .contact {
-        width: 70%;
+        width: 80%;
         margin: 2rem auto 0;
     }
 
@@ -1440,17 +1444,28 @@ h4 {
         font-size: 1.8rem;
     }
     .contact-form {
-        width: 45%;
+        width: 48%;
         max-width: 60rem;
     }
 
     .contact-numbers {
-        width: 45%;
+        width: 48%;
         max-width: 60rem;
     }
 
     .contact-title {
         font-size: 4rem;
+    }
+}
+@media (min-width: 1280px) {
+    .contact {
+        width: 70%;
+    }
+    .contact-form {
+        width: 45%;
+    }
+    .contact-numbers {
+        width: 45%;
     }
 }
 
